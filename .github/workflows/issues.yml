@@ -6,5 +6,6 @@ jobs:
         steps:
             - name: Info
               run: |
-                  echo "There is a new issue - ${{github.event_name}}\nDetails of the issue:"
+                  echo "There is a new issue!"
+                  echo "Details of the issue:"
                   echo "${{toJSON(github.event)}}"
