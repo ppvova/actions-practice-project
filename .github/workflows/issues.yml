@@ -5,4 +5,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Info
-              run: echo "${{toJSON(github)}}"
+              run: |
+                  echo "There is a new issue - ${{github.event_name}}\nDetails of the issue:"
+                  echo "${{toJSON(github.event)}}"
